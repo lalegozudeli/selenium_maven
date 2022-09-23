@@ -12,15 +12,17 @@ public class C07_manageMethodlari {
         driver.get("https://www.amazon.com");
         System.out.println("pencere olculeri : "+driver.manage().window().getSize());
         System.out.println("pencere konumu : "+driver.manage().window().getPosition());
+        Thread.sleep(1000);
 
         driver.manage().window().setSize(new Dimension(500,500));
         driver.manage().window().setPosition(new Point(500,100));
+        Thread.sleep(1000);
 
-        System.out.println("pencerenin yeni olçuleri : " + driver.manage().window().getSize());
+        System.out.println("pencerenin yeni olculeri : " + driver.manage().window().getSize());
         System.out.println("pencerenin yeni konumu : " + driver.manage().window().getPosition());
-        driver.wait(15);
 
-        //driver.close();
+
+        driver.close();
 
 
     }

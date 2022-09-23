@@ -33,6 +33,10 @@ public class TekrarTesti {
 
         //c. Amazon'da görüntülenen ilgili sonuçların sayısını yazdırın
        List<WebElement> aramaSonucu = driver.findElements(By.className("sg-col-inner"));
+       // list işlemi yaparken bizim öncelikli görevimiz listi bir web elementi arayarak kullanmaktır. daha sonra
+        // ise locate işlemini yaparken driver.findelements olarak sonu s harfli olan method kullanılır. çünkü
+        // list birden fazla değer döndürdüğü için çoğul takısı kullanılmalıdır.
+
        String sonucYazisi = aramaSonucu.get(0).getText();
         System.out.println(sonucYazisi);
 
